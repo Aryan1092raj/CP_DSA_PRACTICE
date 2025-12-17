@@ -13,7 +13,7 @@ int main(){
 	cin.tie(nullptr);
     cout.tie(nullptr);
     
-    int t = 1;cin >> t;
+    ll t = 1;cin >> t;
     while(t--){
         solve();
     }

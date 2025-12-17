@@ -1,14 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
+#define nl '\n'
+#define all(x) (x).begin(), (x).end()
+
+void solve(){
+    ll n , m , i , j;
+    cin >> n >> m >> i >> j;
+    cout << 1 <<" " << 1 << " " << n <<" " << m <<nl;
+
+}
 
 int main(){
     ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-    ll t;
-    cin >> t;
+    cout.tie(nullptr);
+    
+    ll t = 1;cin >> t;
     while(t--){
-        ll n , m , i , j;
-        cin >> n >> m >> i >> j;
+        solve();
     }
 }
