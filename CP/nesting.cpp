@@ -1,22 +1,34 @@
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long ;
-#define nl '\n'
-#define all(x) (x).begin(), (x).end()
-
-void solve(){
-
-}
-
-
+#define nl "\n"
 int main(){
     ios::sync_with_stdio(false);
-	cin.tie(nullptr);
-    cout.tie(nullptr);
+    cin.tie(nullptr);
 
-    map<pair<int,int>,int> m;
-    pair<int,int> p1,p2;
-    p1={2,2};
-    p2={2,3};
-    cout << (p1>p2),nl;
+    map<pair<string, string>, vector<int>> m;
+
+    int n;
+    cin >> n;
+
+    for(int i = 0; i < n; ++i){
+        string fn, ln;
+        int ct;
+        cin >> fn >> ln >> ct;
+
+        for(int j = 0; j < ct; ++j){
+            int x;
+            cin >> x;
+            m[{fn, ln}].push_back(x);
+        }
+    }
+    for(auto &pr : m){
+        auto &full_name = pr.first;
+        auto &list = pr.second;
+        cout << full_name.first << " " << full_name.second << nl;
+        cout << list.size() << nl;
+        for(auto &element : list){
+            cout << element << " ";
+        }
+        cout << nl;
+    }
 }

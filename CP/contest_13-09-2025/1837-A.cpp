@@ -6,6 +6,7 @@ int main(){
     while(t--){
         int x ,k;
         cin >> x >>k;
+        cout << x;
         
     }
 }
