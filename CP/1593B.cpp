@@ -5,8 +5,22 @@ using ll = long long ;
 #define all(x) (x).begin(), (x).end()
 
 void solve(){
-    ll n ; cin >> n;
-    
+    string n ; cin >> n;
+    ll cnt = 0;
+    for(int k = 0; k < n.size(); ++k){
+        for(char c : n){
+            ll idx = n.find(c);
+            string new_n = n;
+            new_n.erase(idx, 1);
+            if(stoll(new_n) % 25 == 0){
+                cnt++;
+            }
+            if(!n.empty()){
+                n = n.erase(idx,1);
+            }
+        }
+    }
+    cout << cnt << nl;
 
 }
 
